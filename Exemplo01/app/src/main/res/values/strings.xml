@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Exemplo01</string>
+    <string name="digite_seu_nome">Digite seu nome</string>
+    <string name="digite_sua_disciplina">Digite sua disciplina</string>
+    <string name="digite_sua_nota">Digite sua nota</string>
+    <string name="resultado">Resultado:</string>
+</resources>
