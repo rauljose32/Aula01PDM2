@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -50,7 +52,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public String criarJson(List<Estudante> dados){
-        JSONArray jsonArray = new JSONArray();
+
+        Gson gson = new Gson();
+        String stringJson = gson.toJson(dados);
+        return stringJson;
+
+        /*JSONArray jsonArray = new JSONArray();
         for (int i = 0; i<dados.size();i++){
             JSONObject jsonObject = new JSONObject();
             try {
@@ -62,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-        return "{estudantes:"+jsonArray.toString()+"}";
+        return "{estudantes:"+jsonArray.toString()+"}";*/
     }
 
     public void gerarJSON(View view) {
